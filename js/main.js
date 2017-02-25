@@ -1,0 +1,1 @@
+$(function(){"use-strict";$(".side-nav-right").sideNav({edge:"right",closeOnClick:!1}),$(".slider").slider({full_width:!0}),$("#owl-testimonial").owlCarousel({slideSpeed:300,paginationSpeed:400,singleItem:!0}),$(".latest-news-owl").owlCarousel({autoPlay:!1,singleItem:!0}),$("#fakeLoader").fakeLoader({zIndex:999,spinner:"spinner1",bgColor:"#232323"})});
