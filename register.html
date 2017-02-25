@@ -106,35 +106,21 @@
 		</div>
 	</div>
 
-	<div id="fakeLoader"></div>
 
-	<div class="footer">
-		<div class="container">
-			<div class="about-us-foot">
-				<h6>UNIcorn</h6>
-				
-			</div>
-			<div class="social-media">
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-google"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
-			</div>
-			<div class="copyright">
-				<span>© 2017 All Right Reserved</span>
-			</div>
-		</div>
-	</div>
-
+	<div id="footer"></div>
 	
-	<!-- scripts -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/fakeLoader.min.js"></script>
 	<script src="js/main.js"></script>
-
 	
+	<script>
+		jQuery(document).ready(function($){
 
+			$("#footer").load("footer.html");
+		});
+	</script>
 </body>
 </html>

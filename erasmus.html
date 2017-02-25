@@ -19,8 +19,7 @@
       <link rel="stylesheet" href="css/font-awesome.min.css">
       <link rel="stylesheet" href="css/style.css">
    </head>
-	
-   <body>
+ <body onload="startApp()">
       <div class="navbar-top">
          <div class="site-brand">
             <a href="index.html">
@@ -161,30 +160,20 @@
       </div>
 </main>
 
-<footer>
-      <div id="fakeLoader"></div>
-      <div class="footer">
-         <div class="container">
-            <div class="about-us-foot">
-               <h6>UNIcorn</h6>
-               <p>Социалния инструмент за студенти!</p>
-            </div>
-            <div class="social-media">
-               <a href=""><i class="fa fa-facebook"></i></a>
-               <a href=""><i class="fa fa-google"></i></a>
-               <a href=""><i class="fa fa-instagram"></i></a>
-            </div>
-            <div class="copyright"><span>© 2017 All Right Reserved</span></div>
-         </div>
-      </div>
-</footer>
-	   
-      <script src="js/jquery.min.js"></script>
-      <script src="js/materialize.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/fakeLoader.min.js"></script>
-      <script src="js/jquery.filterizr.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/main.js"></script>
-   </body>
+	<div id="footer"></div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/main.js"></script>
+	
+	<script>
+		jQuery(document).ready(function($){
+
+			$("#footer").load("footer.html");
+		});
+	</script>
+</body>
 </html>
