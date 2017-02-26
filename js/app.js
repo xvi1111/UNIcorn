@@ -11,7 +11,7 @@ function startApp() {
     $("#errorBox").hide();
 
     function showHideMenuLinks() {
-        if (sessionStorage.getItem('authToken')) {
+        if (sessionStorage.getItem('username')) {
             // We have logged in user
             $("#menuProfile").show();
             $("#menuHome").show();
@@ -23,6 +23,7 @@ function startApp() {
             $("#menuContacts").show();
             $("#menuLogin").hide();
             $("#menuRegister").hide();
+            $("#menuLogout").show();
         }
         else {
             // No logged in user
@@ -36,6 +37,7 @@ function startApp() {
             $("#menuContacts").hide();
             $("#menulogin").show();
             $("#menuRegister").show();
+            $("#menuLogout").hide();
         }
     }
 
