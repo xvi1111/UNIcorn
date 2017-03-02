@@ -874,3 +874,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d304c', end
 
 height: 400px;
 }
+.parallax-window {
+     min-height: 400px;
+     background: transparent;
+}
