@@ -878,6 +878,7 @@ height: 400px;
      min-height: 400px;
      background: transparent;
 }
+<<<<<<< HEAD
 
 /* UI Boxes */  
 #infoBox, #errorBox, #loadingBox {
@@ -900,3 +901,5 @@ height: 400px;
 #infoBox {
 	background: #393; dsadas
 }
+=======
+>>>>>>> 32815d230d8888fe238241aa31dd961f1eb87e9a
