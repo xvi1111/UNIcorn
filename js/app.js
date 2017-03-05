@@ -1,10 +1,15 @@
 function startApp() {
 
 
+
+	$("#menuLogout").click(logoutUser);
+	
     showHideMenuLinks();
 
     $("#formLogin").submit(loginUser);
     $("#formRegister").submit(registerUser);
+	
+	
 
     $("#loadingBox").hide();
     $("#infoBox").hide();
@@ -52,6 +57,7 @@ function startApp() {
         'Authorization': "Basic " +
         btoa(kinveyAppKey + ":" + kinveyAppSecret),
     };
+	
 
     function showInfo(message) {
         $('#infoBox').text(message);
@@ -62,7 +68,7 @@ function startApp() {
     }
 
     function showError(errorMsg) {
-        $('#errorBox').text("Error: " + errorMsg);
+        $('#errorBox').text(errorMsg);
         $('#errorBox').show();
     }
 
@@ -74,6 +80,9 @@ function startApp() {
             response.responseJSON.description)
             errorMsg = response.responseJSON.description;
         showError(errorMsg);
+		if(errorMsg == "Invalid credentials. Please retry your request with correct credentials") {
+			showError("Невалидно потребителско име или парола")
+		}
     }
 
 
@@ -97,11 +106,22 @@ function startApp() {
         function loginSuccess(userInfo) {
             saveAuthInSession(userInfo);
             showHideMenuLinks();
-            showInfo('Login successful.');
+            showInfo('Успешен вход.');
             window.setTimeout(function() {
                 window.location.href = 'index.html';
             }, 2000);
         }
+    }
+	
+	function logoutUser() {
+        $.ajax({
+            method: "POST",
+            url: kinveyBaseUrl + "user/" + kinveyAppKey + "/_logout",
+            headers: getKinveyUserAuthHeaders()
+        });
+        sessionStorage.clear();
+        showHideMenuLinks();
+        showInfo('Успешен изход.');
     }
 
     function registerUser() {
@@ -125,7 +145,7 @@ function startApp() {
             error: handleAjaxError
         });
         function registerSuccess(userInfo) {
-            showInfo('User registration successful.');
+            showInfo('Успешна регистрация.');
         }
     }
 
@@ -138,6 +158,12 @@ function startApp() {
         sessionStorage.setItem('username', username);
         $('#profile h2').text(
             "Здравей, " + userInfo.name + "");
+    }
+	
+	 function getKinveyUserAuthHeaders() {
+        return {
+            'Authorization': "Kinvey " + sessionStorage.getItem('authtoken'),
+        };
     }
 
 }

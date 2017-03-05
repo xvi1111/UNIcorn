@@ -874,3 +874,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d304c', end
 
 height: 400px;
 }
+.parallax-window {
+     min-height: 400px;
+     background: transparent;
+}
+
+/* UI Boxes */  
+#infoBox, #errorBox, #loadingBox {
+	width: 80%;
+	margin: 10px auto;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#loadingBox {
+	background: #7CB3E9;
+}
+
+#errorBox {
+	background: #F50;
+}
+
+#infoBox {
+	background: #393; dsadas
+}
