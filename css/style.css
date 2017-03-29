@@ -943,5 +943,28 @@ height: 400px;
 .card-panel {
      background-color: rgba(239, 216, 216, 0.63);
 }
+body .archive {
+     margin: 100px 0px 50px 0px;
+     color: #000;
+}
+body .archive span.badge.new {
+     background-color: #b12530;
+}
+body .archive .collection-item {
+     color:#000;
+}
+body .archive-links {
+     width: 100%;
+     height: 50px;
+     background-color: #fff;
+     color: #000;
+     border: 1px solid #0d6782;
+}
+body .chip {
+     width: 100%;
+}
+body .chip a {
+     color: #000;
+}
 =======
 >>>>>>> 32815d230d8888fe238241aa31dd961f1eb87e9a
