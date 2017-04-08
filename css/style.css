@@ -941,7 +941,7 @@ height: 400px;
 }
 
 .card-panel {
-     background-color: rgba(239, 216, 216, 0.63);
+     background-color: rgba(255, 255, 255, 0.09);
 }
 body .archive {
      margin: 100px 0px 50px 0px;
@@ -985,6 +985,10 @@ body .index-page {
 }
 body .bg-second .chip a {
      color: #fff;
+}
+body .contacts .responsive-img {
+     height: 55x;
+     width: auto;
 }
 =======
 >>>>>>> 32815d230d8888fe238241aa31dd961f1eb87e9a
