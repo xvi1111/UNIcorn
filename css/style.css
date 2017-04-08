@@ -969,9 +969,11 @@ body .chip a {
 body .bg-second .chip {
      height: 51px;
      width: 100%;
-     border: 1px solid transparent;
+     border: 1px solid #fff;
      border-radius: 25px;
+     border-left: none;
      margin: 5px auto;
+     background-color: transparent;
 }
 body .bg-second .chip img {
      height: 50px;
@@ -980,6 +982,9 @@ body .bg-second .chip img {
 body .index-page {
      line-height: 0.7;
      font-size: 10px;
+}
+body .bg-second .chip a {
+     color: #fff;
 }
 =======
 >>>>>>> 32815d230d8888fe238241aa31dd961f1eb87e9a
