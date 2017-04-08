@@ -966,5 +966,20 @@ body .chip {
 body .chip a {
      color: #000;
 }
+body .bg-second .chip {
+     height: 51px;
+     width: 100%;
+     border: 1px solid transparent;
+     border-radius: 25px;
+     margin: 5px auto;
+}
+body .bg-second .chip img {
+     height: 50px;
+     width: auto;
+}
+body .index-page {
+     line-height: 0.7;
+     font-size: 10px;
+}
 =======
 >>>>>>> 32815d230d8888fe238241aa31dd961f1eb87e9a
